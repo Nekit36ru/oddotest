@@ -10,10 +10,9 @@ jobs:
     steps:
     - name: Checkout the code
       uses: actions/checkout@v3
-    name: clon repo
-    uses: git@github.com:Nekit36ru/oddotest.git    
-    name: Install 
-    run: ls -la
+      uses: git@github.com:Nekit36ru/oddotest.git    
+    - name: Install 
+     run: ls -la
    # - name: Install 
    #    run: ls -l
    #    run: ip a
