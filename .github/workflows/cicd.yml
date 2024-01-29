@@ -8,5 +8,5 @@ jobs:
     name: deploy only changed-files
     runs-on: ubuntu-latest
   command:
-            ls -l
-            /home/oddotest1/cicd.sh;
+          - "ls -l"
+          - "/home/oddotest1/cicd.sh;"
