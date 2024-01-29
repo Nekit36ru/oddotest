@@ -1,6 +1,6 @@
 name: Python package
 
-on: push
+on: clone
 
 jobs:
   build:
