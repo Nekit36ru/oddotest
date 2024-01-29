@@ -1,11 +1,11 @@
 name: CICD
 on:
-  push:
+  clone:
     branches:
       - master
-jobs:
-  test:
-        runs-on: echo "HELLO"
+#jobs:
+ # test:
+#        runs-on: echo "HELLO"
 #  steps:
  #   name: Checkout the code
  #   uses: actions/checkout@v3
