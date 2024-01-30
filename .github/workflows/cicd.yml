@@ -1,28 +1,15 @@
 name: Nekit
 
 on: 
-  push
-  
+  push  
 jobs:
   build:
     runs-on: self-hosted
     steps: 
       - name: Checkout repositoty
         uses: actions/checkout@v3
-      #- name: setup Python
-       # uses: actions/setup-python@v4
-        #with:
-         # python-version: "3.10"
-      
-      #  with:
-      #    repository: Nekit36ru/oddotest.git
-     #     token: ${{ DEPLOY_KEY }}
-      - name: Install requirements
-        run: ls -la ${GITHUB_WORKSPACE} 
-      - name: echo
-        run: echo "${{secrets.DEPLOY_HOST}} on ${{secrets.DEPLOY_USER}}"
-      - name: Display apiVersion
-        run: export TEST=${{secrets.DEPLOY_KEY}} && echo "$TEST"
+      - name: Copy workdir to target dir
+        run: cp ${GITHUB_WORKSPACE} /home/ubuntu/project
 
 
         
