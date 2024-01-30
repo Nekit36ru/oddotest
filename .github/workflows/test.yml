@@ -1,12 +1,11 @@
-name: Python package
+name: test Nekit
 
-on: fork
+on: 
+  push
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:  
     - uses: actions/checkout@v1
       with:
