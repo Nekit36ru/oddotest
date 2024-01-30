@@ -18,6 +18,6 @@ jobs:
       #    repository: Nekit36ru/oddotest.git
      #     token: ${{ DEPLOY_KEY }}
       - name: Install requirements
-        run: echo "Hello ${HOME}" 
+        run: echo "Hello ${GITHUB_WORKSPACEE}" 
       - name: echo
         run: echo "${DEPLOY_KEY}"
