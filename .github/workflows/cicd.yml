@@ -18,5 +18,4 @@ jobs:
       #    repository: Nekit36ru/oddotest.git
      #     token: ${{ DEPLOY_KEY }}
       - name: Install requirements
-        run: echo "Hello World!!!" 
-        run: pwd&&ls
+        run: echo "Hello World!!!" && pwd&&ls
