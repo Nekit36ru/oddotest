@@ -16,7 +16,7 @@ jobs:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
-          source: "${GITHUB_WORKSPACE}"
+          source: "${GITHUB_WORKSPACE}/*"
           target: "${DEST_FOLDER}"    
 
 
