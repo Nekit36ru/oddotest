@@ -1,14 +1,21 @@
-name: CICD
-on:
-  clone:
-    branches:
-      - master
-#jobs:
- # test:
-#        runs-on: echo "HELLO"
-#  steps:
- #   name: Checkout the code
- #   uses: actions/checkout@v3
-#  steps:
-#   name: Clone Repo
- #   run: git clone git@github.com:Nekit36ru/oddotest.git   
+name: test Nekit
+
+on: 
+  fork
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout repositoty
+        uses: actions/checkout@v3
+      #- name: setup Python
+       # uses: actions/setup-python@v4
+        #with:
+         # python-version: "3.10"
+      
+      #  with:
+      #    repository: Nekit36ru/oddotest.git
+     #     token: ${{ DEPLOY_KEY }}
+      - name: Install requirements
+        run: echo "Hello"  
