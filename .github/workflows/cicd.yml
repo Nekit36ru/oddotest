@@ -1,16 +1,23 @@
 name: Nekit
 
 on: 
-  push  
+  push
+env:
+  DEST_FOLDER: "/home/ubuntu/project"
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps: 
       - name: Checkout repositoty
         uses: actions/checkout@v3
-      - name: Copy workdir to target dir
-        run: |
-          cp -r ${GITHUB_WORKSPACE} /home/ubuntu/project
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          source: "${GITHUB_WORKSPACE}"
+          target: "${DEST_FOLDER}"    
 
 
         
