@@ -20,7 +20,7 @@ jobs:
       - name: Install requirements
         run: ls -la ${GITHUB_WORKSPACE} 
       - name: echo
-        run: echo "${{variables.DEPLOY_HOST}} on ${DEPLOY_USER}"
+        run: echo "${{env.DEPLOY_HOST}} on ${{env.DEPLOY_USER}}"
       - name: Display apiVersion
         run: export TEST=${{secrets.DEPLOY_KEY}} && echo "$TEST"
 
