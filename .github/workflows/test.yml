@@ -1,7 +1,7 @@
 name: test Nekit
 
 on: 
-  push
+  fork
 
 jobs:
   build:
