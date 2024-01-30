@@ -18,6 +18,11 @@ jobs:
       #    repository: Nekit36ru/oddotest.git
      #     token: ${{ DEPLOY_KEY }}
       - name: Install requirements
-        run: echo "Hello ${GITHUB_WORKSPACE}" 
+        run: ls -la ${GITHUB_WORKSPACE} 
       - name: echo
-        run: echo "${DEPLOY_HOST} on ${DEPLOY_USER}"
+        run: echo "${{variables.DEPLOY_HOST}} on ${DEPLOY_USER}"
+      - name: Display apiVersion
+        run: export TEST=${{secrets.DEPLOY_KEY}} && echo "$TEST"
+
+
+        
