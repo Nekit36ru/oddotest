@@ -1,7 +1,7 @@
 name: test Nekit
 
 on: 
-  fetch
+  fork
 
 jobs:
   build:
