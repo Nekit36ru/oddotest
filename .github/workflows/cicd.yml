@@ -5,7 +5,7 @@ on:
   
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps: 
       - name: Checkout repositoty
         uses: actions/checkout@v3
@@ -18,4 +18,4 @@ jobs:
       #    repository: Nekit36ru/oddotest.git
      #     token: ${{ DEPLOY_KEY }}
       - name: Install requirements
-        run: echo "Hello"  
+        run: echo "Hello World!!!"  
