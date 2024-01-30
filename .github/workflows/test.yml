@@ -6,13 +6,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:  
-    - uses: actions/checkout@v1
-      with:
-        repository: Nekit36ru/oddotest.git
-        token: ${{ DEPLOY_KEY }}
-    - name: Install requirements
-      run: |
+    steps: 
+      - name: Checkout repositoty
+        uses: actions/checkout@v3
+      #- name: setup Python
+       # uses: actions/setup-python@v4
+        #with:
+         # python-version: "3.10"
+      
+        with:
+          repository: Nekit36ru/oddotest.git
+          token: ${{ DEPLOY_KEY }}
+      - name: Install requirements
+        run: |
         echo "Hello"
    # - name: Test with pytest
    #   run: |
