@@ -18,5 +18,6 @@ jobs:
       #    repository: Nekit36ru/oddotest.git
      #     token: ${{ DEPLOY_KEY }}
       - name: Install requirements
-        working-directory: /home/ubuntu/project
-        run: echo "Hello World!!!" && pwd&&ls
+        run: echo "Hello ${HOME}" 
+      - name: echo
+        run: echo "${DEPLOY_KEY}"
