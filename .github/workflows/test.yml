@@ -18,8 +18,7 @@ jobs:
       #    repository: Nekit36ru/oddotest.git
      #     token: ${{ DEPLOY_KEY }}
       - name: Install requirements
-        run: |
-        echo "Hello"
+        run: echo "Hello"
    # - name: Test with pytest
    #   run: |
    #     pytest ./tests
