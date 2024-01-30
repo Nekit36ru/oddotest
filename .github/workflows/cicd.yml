@@ -1,7 +1,7 @@
 name: Nekit
 
 on: 
-  fork
+  push
   
 jobs:
   build:
