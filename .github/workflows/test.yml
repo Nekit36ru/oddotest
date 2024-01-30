@@ -9,9 +9,9 @@ jobs:
 
     steps:  
     - uses: actions/checkout@v1
-  with:
-    repository: Nekit36ru/oddotest.git
-    token: ${{ DEPLOY_KEY }}
+      with:
+        repository: Nekit36ru/oddotest.git
+        token: ${{ DEPLOY_KEY }}
 
     - name: Install requirements
       run: |
