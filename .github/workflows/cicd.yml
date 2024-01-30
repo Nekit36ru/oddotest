@@ -1,7 +1,9 @@
 name: Nekit
 
 on: 
-  fork
+  fork:
+  branches:
+     - '*'
 
 jobs:
   build:
