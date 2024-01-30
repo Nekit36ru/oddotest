@@ -9,7 +9,8 @@ jobs:
       - name: Checkout repositoty
         uses: actions/checkout@v3
       - name: Copy workdir to target dir
-        run: cp ${GITHUB_WORKSPACE} /home/ubuntu/project
+        run: |
+          cp -r ${GITHUB_WORKSPACE} /home/ubuntu/project
 
 
         
